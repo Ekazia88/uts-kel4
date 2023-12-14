@@ -8,8 +8,7 @@ class SucsesCheckout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:
-      Container(
+      body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
@@ -21,20 +20,24 @@ class SucsesCheckout extends StatelessWidget {
         child: Center(
           child: Column(
             children: <Widget>[
-              SizedBox(height: 50,),
+              SizedBox(
+                height: 50,
+              ),
               Text(
-'Success Checkout',
-textAlign: TextAlign.center,
-style: TextStyle(
-color: Colors.white,
-fontSize: 18,
-fontFamily: 'Poppins',
-fontWeight: FontWeight.w700,
-height: 0,
-letterSpacing: 0.72,
-),
-),
-SizedBox(height: 100,),
+                'Success Checkout',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.w700,
+                  height: 0,
+                  letterSpacing: 0.72,
+                ),
+              ),
+              SizedBox(
+                height: 100,
+              ),
               Image.asset(
                 'assets/imgs/Logo.png',
                 height: 200,
@@ -48,7 +51,7 @@ SizedBox(height: 100,),
                   style: TextStyle(
                     fontSize: 18.0,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white, // Menggunakan warna putih untuk teks
+                    color: Colors.white,
                   ),
                 ),
               ),
@@ -57,36 +60,36 @@ SizedBox(height: 100,),
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 14.0,
-                  color: Colors.grey[300], // Menggunakan warna abu-abu muda
+                  color: Colors.grey[300], 
                 ),
               ),
-              SizedBox(height: 20), // Spasi antara teks dan tombol
+              SizedBox(height: 20), 
               ElevatedButton(
                 onPressed: () {
-                   Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) {
-          return MyTicket();
-        },
-      ),
-    );
-                  // Aksi ketika tombol ditekan
-                  // Ganti dengan navigasi atau fungsi yang sesuai
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return MyTicket();
+                      },
+                    ),
+                  );
                 },
                 child: Text('My Ticket'),
               ),
-              // Tambahkan konten lainnya sesuai kebutuhan Anda di sini
             ],
           ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.arrow_back,color: Colors.white,),
+        child: Icon(
+          Icons.arrow_back,
+          color: Colors.white,
+        ),
         onPressed: () {
           Navigator.pop(context);
         },
-        backgroundColor:  Colors.white.withOpacity(0.15000000596046448),
+        backgroundColor: Colors.white.withOpacity(0.15000000596046448),
         shape: CircleBorder(
           side: BorderSide(width: 2, color: Color(0xFFD02626)),
         ),
