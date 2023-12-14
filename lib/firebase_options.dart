@@ -17,24 +17,15 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for ios - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -52,11 +43,38 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyAD9m3SUw_0Bi63dGrRA8_0oLJdCRKAjUE',
+    appId: '1:383981743617:web:4ecfed302e765bd0559a00',
+    messagingSenderId: '383981743617',
+    projectId: 'flutix-app-dec2e',
+    authDomain: 'flutix-app-dec2e.firebaseapp.com',
+    storageBucket: 'flutix-app-dec2e.appspot.com',
+  );
+
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyB0CI_ekCKwkA1mHQEazxt_iAwp7ZOJdAg',
     appId: '1:383981743617:android:b2337534b96e892e559a00',
     messagingSenderId: '383981743617',
     projectId: 'flutix-app-dec2e',
     storageBucket: 'flutix-app-dec2e.appspot.com',
+  );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyB56uF1tRjHa6MHJIGa19r4HSP3MfApCwA',
+    appId: '1:383981743617:ios:9f813b8b61a55f0a559a00',
+    messagingSenderId: '383981743617',
+    projectId: 'flutix-app-dec2e',
+    storageBucket: 'flutix-app-dec2e.appspot.com',
+    iosBundleId: 'com.example.flutix',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyB56uF1tRjHa6MHJIGa19r4HSP3MfApCwA',
+    appId: '1:383981743617:ios:9f9e16cf1915cb46559a00',
+    messagingSenderId: '383981743617',
+    projectId: 'flutix-app-dec2e',
+    storageBucket: 'flutix-app-dec2e.appspot.com',
+    iosBundleId: 'com.example.flutix.RunnerTests',
   );
 }
