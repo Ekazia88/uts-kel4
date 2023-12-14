@@ -118,7 +118,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                           hintText: 'Type here ...',
                           hintStyle: TextStyle(color: Color(0xFFD9D9D9)),
                           border: OutlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xFFC5BFBF)),
+                            borderSide: BorderSide(color: Color.fromARGB(255, 182, 212, 9)),
                             borderRadius: BorderRadius.circular(5),
                           ),
                           contentPadding: const EdgeInsets.symmetric(horizontal: 8),
