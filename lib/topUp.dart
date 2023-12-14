@@ -76,7 +76,7 @@ height: 0.10,
           SizedBox(height: 20),
           Text(
             'OTHER E-WALLET',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold,color: Colors.white),
           ),
           SizedBox(height: 10),
           buildButtonGrid(4, ['DANA', 'SHOOPE', 'GOPAY', 'OVO', 'ISAKU', 'LINK AJA']),
